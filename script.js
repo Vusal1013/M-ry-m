@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mesaj zamanlaması ayarları (milisaniye cinsinden)
     const CONFIG = {
         normalMessageDuration: 2000,    // Normal mesajların görünme süresi
-        linkMessageDuration: 3000,      // Link içeren mesajların görünme süresi
+        linkMessageDuration: 6000,      // Link içeren mesajların görünme süresi
         typingSpeed: 100,              // Yazma hızı (her karakter arası süre)
         fadeSpeed: 50                  // Solma efekti hızı
     };
@@ -10,9 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const messages = [
         "Sən mənim  hələlik ən dəyərli dostumsan! ❤️",
         "Səninlə keçirdiyim hər an çok dəyərlidir! ❤️",
-        "3 ilin hardasa toplasan 5 ayını danışmısıq, bunun uzun müddətə davam etmək istəyirəm.💗",
-        "İllər sonra birinə güvənib dəyər vermək istəyirəm.💗",
-        "Bunu boşa çıxarmayın, mən sənə güvən verirəm.💗",
+        "3 ilin hardasa toplasan 5 ayını danışmısıq, bunun uzun müddət davam etməyini istəyirəm.💗",
+        "İllər sonra birinə güvənib sənə dəyər vermək istəyirəm.💗",
         "Buda məndən sənə bir iltifat, sıra səndədir gözəllik 💝",
         '<a href="https://wa.me/+994504527994" target="_blank" class="message-link">WhatsApp\'tan mesaj at! 💝</a>'
     ];
