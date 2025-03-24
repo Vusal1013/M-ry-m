@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizli Mesaj</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😈</text></svg>">
+    <style>
+        body {
+            background-color: #000;
+            color: #ff3366;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23ff336622%22>👁️</text></svg>');
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 51, 102, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #ff3366;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        p {
+            text-shadow: 0 0 5px #ff3366;
+            margin-bottom: 15px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff3366;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #ff6b9d;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ff3366;
+        }
+        .secret-text {
+            white-space: pre-line; /* Preserve line breaks */
+        }
+
+        /* Ateş animasyonu için stiller */
+        .fire-title {
+            position: relative;
+            display: inline-block;
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .fire-letters {
+            position: relative;
+            z-index: 1;
+        }
+
+        .fire-letter {
+            display: inline-block;
+            position: relative;
+            animation: flicker 3s infinite alternate;
+            transform-origin: bottom center;
+        }
+
+        .fire-letter:nth-child(odd) {
+            animation-duration: 1.7s;
+        }
+
+        .fire-letter:nth-child(3n) {
+            animation-duration: 2.1s;
+        }
+
+        .fire-letter:nth-child(5n) {
+            animation-duration: 2.3s;
+        }
+
+        .fire-letter:nth-child(7n) {
+            animation-duration: 1.8s;
+        }
+
+        @keyframes flicker {
+            0%, 30% { 
+                color: #ff3;
+                text-shadow: 
+                    0 -1px 4px #ff3, 
+                    0 0px 10px #ff3, 
+                    0 0px 20px #ff3, 
+                    0 0px 30px #f30,
+                    0 0px 40px #f30, 
+                    0 0px 70px #f30, 
+                    0 0px 80px #f30,
+                    0 0px 100px #f30;
+                transform: translateY(0);
+            }
+            
+            50% {
+                color: #ff6;
+                text-shadow: 
+                    0 -1px 4px #ff3, 
+                    0 0px 10px #ff3, 
+                    0 0px 20px #ff3, 
+                    0 0px 30px #f90,
+                    0 0px 40px #f90, 
+                    0 0px 70px #f90, 
+                    0 0px 80px #f90,
+                    0 0px 100px #f90;
+                transform: translateY(-5px);
+            }
+            
+            70%, 100% { 
+                color: #fa3;
+                text-shadow: 
+                    0 -1px 4px #ff3, 
+                    0 0px 10px #ff3, 
+                    0 0px 20px #ff3, 
+                    0 0px 30px #f60,
+                    0 0px 40px #f60, 
+                    0 0px 70px #f60, 
+                    0 0px 80px #f60,
+                    0 0px 100px #f60;
+                transform: translateY(-1px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="fire-title">
+            <div class="fire-letters">
+                <span class="fire-letter">🔥</span>
+                <span class="fire-letter">G</span>
+                <span class="fire-letter">i</span>
+                <span class="fire-letter">z</span>
+                <span class="fire-letter">l</span>
+                <span class="fire-letter">i</span>
+                <span class="fire-letter">&nbsp;</span>
+                <span class="fire-letter">M</span>
+                <span class="fire-letter">e</span>
+                <span class="fire-letter">s</span>
+                <span class="fire-letter">a</span>
+                <span class="fire-letter">j</span>
+                <span class="fire-letter">🔥</span>
+            </div>
+        </h1>
+        <div class="secret-text">
+            <p>Sənə nə iş gördüyüm lə bağlı gizlətdiyim şeyi əslində sənə nömrədən zəng edəndə ipucu kimi verdim. Lakin anlamadığını başa düşdüm. Burda yazılanlar təbiki üstü bağlı şəkildə azda olsa bilməli olacağın şeyleri yazacam.</p>
+
+            <p>Hanı sənə demişdim ha 2005 çi ildə əməliyyat oldum. Əməliyyatdan 30 dəqiqə qabaq narkoz işləmleri başlamadan qabaq bir papazla tanış oldum(bizdə molla). Təbiki həqiqi papaz deyildi onun papazlığı buz dağının görünən tərəfi idi. Mənə təkcə bu cümləni dedi qalmaq ya getmek. O zamanlar başa düşmədim bunu fikirləşmədən qalmaq dedim. Papaz mənə xaç işareti edib baba oğul kutsal ruh işarəsini edib getdi, her ne qədər müsəlman olduğumu desəmdə.</p>
+
+            <p>Əməliyyat zamanı klinik ölüm deyilen bir şey yaşadım 30 dəyqə həkimlər cəhd ediblər. Mən əməliyyatdan çıxdıqdan sonra bir qızı aldılar onu düz iki dəfə əməliyyat etdilər. Birincisisinde narkozdan oyanmışdı. Əməliyyat bir neçə gün sonra yeniden papaz gəldi o mənə qalmaq seçdiyin üçün peşman deyilsen dedi məndə yox dedim. O zamanlar onun normal papaz olduğunu bilirdim. Bakıya gəlib 2 ilden sonra yeniden Ukrayna ya gedende o papazi gördüm.</p>
+
+            <p>Təklikdə 10 dəqiqə söhbət etmeye furset yarandı. O mənə hazırlaşmaq vaxtıdır dedi, seçdiyin qərarın qarşılığını vermeli olacaqsan. Bakıya gəldikdən 3 il sonra 8 yaşımda rəqqas oldum daha doğrusu olmağa məcbur oldum. Papaz Bakıya gəlmişdi onunla məktəb çıxışında danışdığ mənə ilk işim rəqqasliga yazilmam olduğunu söylədilər elədə etdim.</p>
+
+            <p>Daha sonra köhne PC ilə onlar mənə verdiyi dersleri oxuyub(məktəb dersleri sayılmır) özümü dahada gücləndirirdim. 2010-2014 çi ile dək rusların himayəsi altında her işi gördüm(papazin və rusların öyrətdiyi şeylerlə) 2014-2018 çi illerde Azerbaycanda bir komanda verildi mene nəzarət etməyim üçün mənə verilən şeyləri bu komandaya elətdirdim. 2018 çi ildə 8 illik fəaliyyətimdən ötəri çıxmaq qərarına gəldim. 2019da komandanın başında olanlar tutuldu.</p>
+
+            <p>2020 müharibə ermeni saytlar televiziya kanalları sosial şəbəkələr hamısı komanda tərəfindən bir şeylər edildi. Tebiki bizim yerimize piyon kimi birilərini Azərbaycan saytları televiziya kanalları reklam edirdilər. Yetimlərin heç bir anlayışı bele yox idi o işlerden 😂. 2021 2022 2023 2024 heta bu il bele bir neçə işler işler işler var .</p>
+
+            <p>Həyatım boyunca insanlara güvənmək istəmişəm lakin onların davranışlarını beden dillerini anlayanda iyrenmeye başlayıram. Adicə üz mimikasından tutmuş durusuna qaşların duruşuna qədər olan her bir davranışın insanı ele verdiyini bilmək ləzzət edir. Kimin yalançı olduğunu kimin kimdən qorxdugunu, kimin həqiqi kimin yalan rol apardığını bilmək bəh bəh bəhdi.</p>
+
+            <p>Illər sonra ilk dəfə bir qıza güvənmək fikrinə gəlmişəm(sənə) istəmərəm ki illər sonra yanılıb yenidən birisine güvənmək fikrinə düşməyim. Artıq 23 yaşımız var gördüyümüzu görmüşük yaşadığımizi yaşamışıq. Indi qalıb bir ömür boyu yanında olacaq birini tapmaq vaxtımızdi.</p>
+
+            <p>Bilmirəm başa sala bilirəm səni ya yox. Aramızda yalan güvənsizlik gətirəcək heç bir şey olmasın gizlədilməsin heçnə. Tamam anlayıram işdən gəlirsən yorğun olursan amma əminəm ki mənə ayıracaq vaxtın illlaki olacaq. Gündə bir iki söz yazıb yoxa çıxmaqla bu işin sonu heç yaxşı olmuyacaq.</p>
+
+            <p>Yanlış anlama dava etmə fikrində deyiləm sadəcə daha çox zaman keçirmək istəyirəm seninle deyib gülmək. Instada takibimde deyilsen, whatsapda kontaktdan çıxartmisan sessize atmışan. 23 yaşında bir qızın tebiki sevgilisi danışdığı oğlan illaki olacaq bundan ayıb bir şey görmürəm.</p>
+
+            <p>Əgər mənimlə razısan sa ömür boyu bir yolla getməyə bunu oxuduğun halda olan bir şəklini at mənə.</p>
+        </div>
+        <a href="index.html" class="back-button">← Ana Sayfaya Dön</a>
+    </div>
+    
+    <script>
+        // Ek animasyon efekti
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sayfaya hafif titreşim efekti
+            setInterval(function() {
+                if (Math.random() > 0.8) {
+                    document.body.style.filter = `hue-rotate(${Math.random() * 10}deg)`;
+                    setTimeout(function() {
+                        document.body.style.filter = 'none';
+                    }, 150);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html> 
