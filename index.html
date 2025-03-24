@@ -9,20 +9,38 @@
     <style>
         .devil-link {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            font-size: 30px;
+            bottom: max(20px, 4vh);
+            right: max(20px, 4vw);
+            font-size: clamp(24px, 5vw, 36px);
             cursor: pointer;
             text-decoration: none;
             opacity: 0.7;
             transition: all 0.3s ease;
             z-index: 100;
             filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.5));
+            padding: 10px;
+            margin: -10px;
+            -webkit-tap-highlight-color: transparent;
         }
-        .devil-link:hover {
+        .devil-link:hover, .devil-link:active {
             opacity: 1;
             transform: scale(1.2);
             filter: drop-shadow(0 0 15px red);
+        }
+        
+        @media (max-width: 480px) {
+            .devil-link {
+                bottom: max(15px, 3vh);
+                right: max(15px, 3vw);
+                font-size: 30px;
+            }
+        }
+        
+        @media (min-width: 481px) and (max-width: 768px) {
+            .devil-link {
+                bottom: max(18px, 3.5vh);
+                right: max(18px, 3.5vw);
+            }
         }
     </style>
 </head>
