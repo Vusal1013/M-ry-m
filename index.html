@@ -1,61 +1,1060 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sənə Özəl</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
-    <link rel="stylesheet" href="style.css">
+    <title>SYSTEM HACKED</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💀</text></svg>">
     <style>
-        .devil-link {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        
+        body {
+            background-color: #000;
+            color: #0f0;
+            overflow: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .overlay {
             position: fixed;
-            bottom: max(20px, 4vh);
-            right: max(20px, 4vw);
-            font-size: clamp(24px, 5vw, 36px);
-            cursor: pointer;
-            text-decoration: none;
-            opacity: 0.7;
-            transition: all 0.3s ease;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
             z-index: 100;
-            filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.5));
+        }
+        
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: rgba(0, 255, 0, 0.1);
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 101;
+            animation: scanline 6s linear infinite;
+        }
+        
+        @keyframes scanline {
+            0% {
+                top: -5px;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+        
+        .glitch-container {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 10;
+            width: 90%;
+        }
+        
+        .main-title {
+            font-size: clamp(30px, 5vw, 60px);
+            font-weight: bold;
+            letter-spacing: 3px;
+            animation: glitch 1s infinite, textColor 4s infinite alternate;
+            text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .main-title::before,
+        .main-title::after {
+            content: "SİSTEM HACKLƏNDİ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .main-title::before {
+            color: #f0f;
+            z-index: -1;
+            animation: glitch-position 3s infinite alternate;
+        }
+        
+        .main-title::after {
+            color: #0ff;
+            z-index: -2;
+            animation: glitch-position 2s infinite alternate-reverse;
+        }
+        
+        @keyframes glitch-position {
+            0%, 90% {
+                transform: translate(0);
+                opacity: 1;
+            }
+            10%, 30%, 50%, 70% {
+                transform: translate(-3px, 0);
+                opacity: 0.8;
+            }
+            20%, 40%, 60%, 80% {
+                transform: translate(3px, 0);
+                opacity: 0.8;
+            }
+            95%, 100% {
+                transform: translate(0);
+                opacity: 1;
+            }
+        }
+        
+        .sub-title {
+            font-size: clamp(16px, 3vw, 24px);
+            margin-bottom: 20px;
+            color: #f00;
+            text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+            animation: blink 0.5s infinite alternate;
+        }
+        
+        .message {
+            font-size: clamp(14px, 2vw, 18px);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .flicker {
+            animation: flicker 3s infinite alternate;
+        }
+        
+        .company {
+            font-size: clamp(18px, 3vw, 30px);
+            color: #ff0;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 30px 0;
+            text-shadow: 0 0 10px #ff0, 0 0 20px #ff0;
+            transform-style: preserve-3d;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+        }
+        
+        .skull {
+            font-size: clamp(40px, 10vw, 100px);
+            margin: 20px 0;
+            animation: pulse 2s infinite, rotateSkull 8s infinite linear;
+            display: inline-block;
+        }
+        
+        @keyframes rotateSkull {
+            0% {
+                transform: rotateY(0deg) scale(1);
+            }
+            50% {
+                transform: rotateY(180deg) scale(1.2);
+            }
+            100% {
+                transform: rotateY(360deg) scale(1);
+            }
+        }
+        
+        @keyframes glitch {
+            0% {
+                transform: skew(0deg);
+                text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            }
+            20% {
+                transform: skew(0deg);
+                text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            }
+            21% {
+                transform: skew(10deg);
+                text-shadow: 1px 0 0 red, -1px 0 0 blue;
+            }
+            25% {
+                transform: skew(0deg);
+                text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            }
+            90% {
+                transform: skew(0deg);
+                text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            }
+            91% {
+                transform: skew(-10deg);
+                text-shadow: -1px 0 0 red, 1px 0 0 blue;
+            }
+            95% {
+                transform: skew(0deg);
+                text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            }
+            100% {
+                transform: skew(0deg);
+                text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            }
+        }
+        
+        @keyframes blink {
+            0%, 19% {
+                opacity: 0;
+            }
+            20%, 100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes flicker {
+            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+                opacity: 1;
+            }
+            20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+                opacity: 0.5;
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+            }
+            50% {
+                transform: scale(1.1);
+                text-shadow: 0 0 20px #f00, 0 0 30px #f00;
+            }
+            100% {
+                transform: scale(1);
+                text-shadow: 0 0 10px #f00, 0 0 20px #f00;
+            }
+        }
+        
+        @keyframes textColor {
+            0% {
+                color: #0f0;
+            }
+            50% {
+                color: #0ff;
+            }
+            100% {
+                color: #0f0;
+            }
+        }
+        
+        .matrix-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .hackercode {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid #0f0;
+            border-radius: 5px;
             padding: 10px;
-            margin: -10px;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .devil-link:hover, .devil-link:active {
-            opacity: 1;
-            transform: scale(1.2);
-            filter: drop-shadow(0 0 15px red);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #0f0;
+            overflow: hidden;
+            z-index: 10;
         }
         
-        @media (max-width: 480px) {
-            .devil-link {
-                bottom: max(15px, 3vh);
-                right: max(15px, 3vw);
-                font-size: 30px;
+        .hackercode pre {
+            margin: 0;
+            padding: 0;
+            white-space: pre-wrap;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #111;
+            margin: 20px 0;
+            border: 1px solid #0f0;
+            position: relative;
+        }
+        
+        .progress {
+            width: 0%;
+            height: 100%;
+            background-color: #f00;
+            animation: progress 30s linear forwards;
+        }
+        
+        @keyframes progress {
+            0% {
+                width: 0%;
+                background-color: #f00;
+            }
+            50% {
+                background-color: #ff0;
+            }
+            100% {
+                width: 100%;
+                background-color: #0f0;
             }
         }
         
-        @media (min-width: 481px) and (max-width: 768px) {
-            .devil-link {
-                bottom: max(18px, 3.5vh);
-                right: max(18px, 3.5vw);
+        .counter {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .access-granted {
+            display: none;
+            color: #0f0;
+            font-size: clamp(20px, 4vw, 40px);
+            margin-top: 20px;
+            text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            animation: pulse 1s infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .hackercode {
+                height: 150px;
             }
+        }
+        
+        /* Yeni eklenen stil ve animasyonlar */
+        .big-brother {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .camera-container {
+            position: relative;
+            width: 48%;
+            height: 120px;
+            border: 1px solid #f00;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .webcam-effect {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZmlsdGVyIGlkPSJub2lzZSI+CiAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz4KICA8ZmVDb2xvck1hdHJpeCB0eXBlPSJzYXR1cmF0ZSIgdmFsdWVzPSIwIi8+CiAgPGZlQ29tcG9zaXRlIG9wZXJhdG9yPSJhcml0aG1ldGljIiBrMT0iMCIgazI9IjAuMTUiIGszPSIwIiBrND0iMCIvPgo8L2ZpbHRlcj4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC41Ii8+Cjwvc3ZnPg==');
+            mix-blend-mode: screen;
+            z-index: 2;
+        }
+        
+        .camera-text {
+            color: #f00;
+            font-size: 14px;
+            text-align: center;
+            text-shadow: 0 0 5px #f00;
+            z-index: 3;
+            position: absolute;
+            width: 100%;
+            top: 10px;
+        }
+        
+        .camera-record {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 12px;
+            height: 12px;
+            background-color: #f00;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+            z-index: 3;
+        }
+        
+        .info-box {
+            margin-top: 20px;
+            border: 1px solid #0f0;
+            padding: 10px;
+            text-align: left;
+            background-color: rgba(0, 0, 0, 0.6);
+            font-size: 14px;
+        }
+        
+        .ip-address {
+            color: #ff0;
+            animation: flicker 2s infinite;
+            font-weight: bold;
+        }
+        
+        .big-glitch {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.2);
+            opacity: 0;
+            z-index: 200;
+            pointer-events: none;
+            animation: big-glitch 10s infinite;
+        }
+        
+        @keyframes big-glitch {
+            0%, 95%, 100% {
+                opacity: 0;
+            }
+            10%, 11% {
+                opacity: 0.5;
+                transform: translateX(-20px);
+            }
+            50%, 51% {
+                opacity: 0.5;
+                transform: translateX(20px);
+            }
+            90%, 91% {
+                opacity: 0.5;
+                transform: translateY(-10px);
+            }
+        }
+        
+        .alert-popup {
+            position: fixed;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #f00;
+            color: #f00;
+            font-size: 18px;
+            display: none;
+            z-index: 150;
+            text-align: center;
+            box-shadow: 0 0 20px #f00;
+            max-width: 80%;
+        }
+        
+        .type-effect {
+            border-right: 2px solid #0f0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 5s steps(40) 1s 1 normal both, blink-cursor 0.5s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-cursor {
+            from, to { border-color: transparent }
+            50% { border-color: #0f0 }
         }
     </style>
 </head>
 <body>
-    <div class="fire"></div>
-    <div class="container">
-        <div class="heart"></div>
-        <div class="message">
-            <h1>❤️ Hörmətli Məryəm ❤️</h1>
-            <p class="typing-text"></p>
+    <div class="overlay"></div>
+    <div class="scanline"></div>
+    <div class="big-glitch"></div>
+    <canvas class="matrix-effect" id="matrixCanvas"></canvas>
+    
+    <div class="alert-popup" id="alertPopup"></div>
+    
+    <div class="glitch-container">
+        <div class="skull">💀</div>
+        <h1 class="main-title">SİSTEM HACKLƏNDİ</h1>
+        <p class="sub-title">UNAUTHORIZED ACCESS DETECTED</p>
+        
+        <div class="company flicker">ZechTiccer Company</div>
+        
+        <p class="message">Bu sistem ZechTiccer Company tərəfindən hackləndı. Bütün məlumatlarınız nəzərət altındadır. Sistemə giriş əldə edildi.</p>
+        
+        <div class="big-brother">
+            <div class="camera-container">
+                <div class="camera-text">WEBCAM CAPTURED</div>
+                <div class="camera-record"></div>
+                <div class="webcam-effect"></div>
+                <div style="color: #f00; font-size: 30px;">👁️</div>
+            </div>
+            <div class="camera-container">
+                <div class="camera-text">SCREEN CAPTURED</div>
+                <div class="camera-record"></div>
+                <div class="webcam-effect"></div>
+                <div style="color: #f00; font-size: 30px;">🖥️</div>
+            </div>
         </div>
-        <div class="floating-hearts"></div>
+        
+        <div class="info-box">
+            <p class="type-effect">Təhlükəsizlik yoxlanılır...</p>
+            <p>IP: <span class="ip-address" id="ip-address">loading...</span></p>
+            <p>BROWSER: <span id="browser-info">loading...</span></p>
+            <p>LOCATION: <span id="location">loading...</span></p>
+            <p>SYSTEM: <span id="system-info">loading...</span></p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="counter">Məlumat çıxarılır: <span id="percentage">0</span>%</div>
+        
+        <div class="access-granted" id="accessGranted">ACCESS GRANTED</div>
     </div>
-    <div id="sparks"></div>
-    <a href="gizli-mesaj.html" class="devil-link" title="Gizli Mesaj">😈</a>
-    <script src="script.js"></script>
+    
+    <div class="hackercode">
+        <pre id="code"></pre>
+    </div>
+    
+    <audio id="keySound" preload="auto">
+        <source src="data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA/+M4wAAAAAAAAAAAAEluZm8AAAAPAAAAAwAAAbMAJycnJycnJycnJycnJycnJycnV1dXV1dXV1dXV1dXV1dXV1dXV1eHh4eHh4eHh4eHh4eHh4eHh4eHh7e3t7e3t7e3t7e3t7e3t7e3t7e3//////////////////////////8AAAAATGF2YzU4LjEzAAAAAAAAAAAAAAAAJAYBg//+8wAAABuAJcbHAAAAAP/jOMAAAAAAAAAAAABJbmZvAAAADwAAAAMAAAGzACcnJycnJycnJycnJycnJycnJ1dXV1dXV1dXV1dXV1dXV1dXV1dXh4eHh4eHh4eHh4eHh4eHh4eHh4e3t7e3t7e3t7e3t7e3t7e3t7e3t///////////////////////////AAAAAE1vdW50YWluIEFycmFuZ2VyIDUuMC4zZQAAAAAAAAAAAP/j8MAAAAAAAAAAAAAAT1RHUyAAAAAXAAAATVAzIFVuaXF1ZSBJRAAFJyoAAAA0ZXNkACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8vRVNEAAAA//tAxAADGH3+JGMGHMIuQbOsYYswG3gAZS54YAAAAAyUSsAClTr6hgGCQnH9r+uVHn+qHCWxSFcMoXsClr/QwQAArb/3/4BQ0GAICgm/19sQBDf///8AJAQQBQ3//+hggLLV//r1a0L//V1QwQAUSPqq9KYgBgkH4P//Gnh+HwfDVZBcMYGBRXzggABZf9f9AQYDAgTv/9WjAIPv//7/+AoYIFBIHf1oA3Cf0/qJIQCBo///bNTb0+z6Kh7RgYKhg3lxDAAJD/5cCAB//sQxDQAGPneBGYmXANFw80Mx82AAfgeCAAVf/7agMD+3////oAwHAgZB/r1EA3C/98gYHBi///z1qZ//8pXjAwUFxLTSgAAYj/AADgn///+3j/53//Mw2bSADAgVTDCsAAgP//+AYGD+l////QBgOBAfq/pBC/V///8iVSA4P/SqV/7gYOkAAAAA//sQxEsDGS4aCgYwbcMNOMKAwNKAAAAAExQYAT//9JQYBcOAgP0jQfqqt/9/2AIyoAgP//+sn/f/QgjYvwAE//+kGBAFw4N0ToPVWn////AABB/93/AABX///8H///9BsH4pRZSJQ/T86Xh+GsTh7iWgAiA/TnrKofiYGEJ4ViUTxMUWIc0p8TwKgscaM//7EMRaARj+NAgMHbjDCcO/AYMl2HBMGB4hh4KiOIhgI/+r///yH6SmD/p8VERTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/+xDEbYEXcjYCDDDJwuhGwAGGGRBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ==" type="audio/mp3">
+    </audio>
+    
+    <script>
+        // Matrix effect
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%ZechTiccer";
+        const matrixChars = matrix.split("");
+        
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        
+        const drops = [];
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+        
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = "#0f0";
+            ctx.font = fontSize + "px monospace";
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        
+        setInterval(drawMatrix, 40);
+        
+        // Simulated hacker code
+        const codeContainer = document.getElementById('code');
+        const hackerLinesOriginal = [
+            "> BYPASSING FIREWALL...",
+            "> ACCESSING MAINFRAME...",
+            "> INJECTING MALWARE...",
+            "> DECRYPTING PASSWORDS...",
+            "> DOWNLOADING USER DATA...",
+            "> MAPPING NETWORK TOPOLOGY...",
+            "> INSTALLING BACKDOOR ACCESS...",
+            "> CORRUPTING DATABASE...",
+            "> ESCALATING PRIVILEGES...",
+            "> WIPING LOGS...",
+            "> PLANTING ROOTKIT...",
+            "> CAPTURING KEYSTROKES...",
+            "> HIJACKING SESSION...",
+            "> DISABLING SECURITY...",
+            "> INITIATING DATA TRANSFER..."
+        ];
+        
+        // Additional hacker lines for randomization
+        const additionalHackerLines = [
+            "> ANALYZING SYSTEM ARCHITECTURE...",
+            "> CREATING CREDENTIAL DUMPS...",
+            "> NETWORK TRAFFIC INTERCEPTED...",
+            "> OVERRIDING ADMIN CONTROLS...",
+            "> BRUTE FORCING AUTHENTICATION...",
+            "> EXTRACTING CONFIDENTIAL DATA...",
+            "> UPLOADING MONITORING SOFTWARE...",
+            "> ESTABLISHING COMMAND & CONTROL...",
+            "> EXECUTING ARBITRARY CODE...",
+            "> LOCATING SENSITIVE INFORMATION...",
+            "> POISONING DNS CACHE...",
+            "> MASKING DIGITAL FOOTPRINT...",
+            "> PERFORMING MAN-IN-THE-MIDDLE...",
+            "> TARGETING NETWORK INFRASTRUCTURE...",
+            "> INITIATING REPLICATION ROUTINE...",
+            "> SCANNING FOR VULNERABILITIES...",
+            "> DECODING ENCRYPTED TRAFFIC...",
+            "> DEPLOYING STEALTH PROTOCOLS...",
+            "> COMPROMISING SECURITY LAYERS...",
+            "> ACTIVATING PERSISTENCE MECHANISM..."
+        ];
+        
+        // Post-completion hacker lines
+        const postCompletionLines = [
+            "> BEGINNING SYSTEM DESTRUCTION...",
+            "> CORRUPTING BOOT SECTORS...",
+            "> OVERWRITING MASTER BOOT RECORD...",
+            "> ENCRYPTING ALL STORAGE DEVICES...",
+            "> DISABLING RECOVERY OPTIONS...",
+            "> REMOVING SYSTEM RESTORE POINTS...",
+            "> DELETING CRITICAL SYSTEM FILES...",
+            "> FORMATTING CONNECTED DRIVES...",
+            "> INITIATING PERMANENT DATA WIPE...",
+            "> DESTROYING FILE ALLOCATION TABLES...",
+            "> INSTALLING DESTRUCTIVE PAYLOAD...",
+            "> PREPARING FOR FINAL SYSTEM SHUTDOWN...",
+            "> DATA DESTRUCTION PROCESS: ACTIVE"
+        ];
+        
+        // Combined hacker lines for random selection
+        let hackerLines = [...hackerLinesOriginal];
+        let isPostCompletion = false;
+        
+        let lineIndex = 0;
+        let codeTypeInterval;
+        
+        function startHackerCode() {
+            if (codeTypeInterval) clearInterval(codeTypeInterval);
+            
+            codeContainer.innerHTML = "";
+            lineIndex = 0;
+            
+            // If post-completion, use those lines instead
+            const currentLines = isPostCompletion ? postCompletionLines : hackerLines;
+            
+            codeTypeInterval = setInterval(() => {
+                if (lineIndex < currentLines.length) {
+                    codeContainer.innerHTML += currentLines[lineIndex] + "<br>";
+                    codeContainer.scrollTop = codeContainer.scrollHeight;
+                    lineIndex++;
+                    
+                    if (audioEnabled) playKeySound();
+                } else {
+                    clearInterval(codeTypeInterval);
+                    // Start again after a delay with randomized lines
+                    setTimeout(() => {
+                        codeContainer.innerHTML = "";
+                        lineIndex = 0;
+                        
+                        // Randomly select and shuffle the hacker lines if not in post-completion mode
+                        if (!isPostCompletion) {
+                            // Mix original and additional lines and shuffle
+                            hackerLines = [...hackerLinesOriginal];
+                            
+                            // Randomly replace some lines with additional lines
+                            for (let i = 0; i < 8; i++) {
+                                const randomOriginalIndex = Math.floor(Math.random() * hackerLines.length);
+                                const randomAdditionalIndex = Math.floor(Math.random() * additionalHackerLines.length);
+                                hackerLines[randomOriginalIndex] = additionalHackerLines[randomAdditionalIndex];
+                            }
+                            
+                            // Shuffle the array
+                            hackerLines.sort(() => Math.random() - 0.5);
+                        }
+                        
+                        const currentLines = isPostCompletion ? postCompletionLines : hackerLines;
+                        
+                        const newCodeTypeInterval = setInterval(() => {
+                            if (lineIndex < currentLines.length) {
+                                codeContainer.innerHTML += currentLines[lineIndex] + "<br>";
+                                codeContainer.scrollTop = codeContainer.scrollHeight;
+                                lineIndex++;
+                                
+                                if (audioEnabled) playKeySound();
+                            } else {
+                                clearInterval(newCodeTypeInterval);
+                                // Start again after a delay
+                                setTimeout(startHackerCode, 3000);
+                            }
+                        }, 700);
+                    }, 3000);
+                }
+            }, 700);
+        }
+        
+        // Begin hacker code animation
+        startHackerCode();
+        
+        // Percentage counter
+        const percentageElement = document.getElementById('percentage');
+        const accessGranted = document.getElementById('accessGranted');
+        
+        let percentage = 0;
+        const percentageInterval = setInterval(() => {
+            percentage++;
+            percentageElement.textContent = percentage;
+            
+            if (percentage >= 100) {
+                clearInterval(percentageInterval);
+                accessGranted.style.display = "block";
+                showPopup("BİLDİRİŞ: Bütün məlumatlar əldə edildi");
+                
+                // Switch to post-completion mode
+                isPostCompletion = true;
+                startHackerCode();
+                
+                // Start the dramatic finale sequence
+                setTimeout(() => {
+                    showPopup("XƏBƏRDARLİQ: Silmə prosesi başladı", "center");
+                    startSystemMeltdown();
+                }, 5000);
+            }
+        }, 300);
+        
+        // Fix for audio - only enable after user interaction
+        let audioEnabled = false;
+        
+        document.addEventListener('click', function() {
+            audioEnabled = true;
+        });
+        
+        document.addEventListener('keydown', function() {
+            audioEnabled = true;
+        });
+        
+        // Keyboard sound effect
+        const keySound = document.getElementById('keySound');
+        
+        function playKeySound() {
+            if (!audioEnabled) return;
+            
+            try {
+                // Clone the sound effect so it can be played multiple times
+                const sound = keySound.cloneNode();
+                sound.volume = 0.1;
+                sound.play().catch(e => {
+                    // Silently fail if audio still can't play
+                    console.log("Audio failed to play:", e);
+                });
+                
+                // Remove the cloned audio element when done
+                sound.onended = function() {
+                    sound.remove();
+                };
+            } catch (e) {
+                console.log("Error playing sound:", e);
+            }
+        }
+        
+        // System meltdown effect
+        function startSystemMeltdown() {
+            // Create more intense glitches
+            const glitchInterval = setInterval(() => {
+                const glitchType = Math.floor(Math.random() * 5);
+                
+                switch(glitchType) {
+                    case 0:
+                        // Color shift
+                        document.body.style.filter = `hue-rotate(${Math.random() * 360}deg) contrast(${1 + Math.random()}`;
+                        break;
+                    case 1:
+                        // Invert colors
+                        document.body.style.filter = "invert(100%)";
+                        break;
+                    case 2:
+                        // Blur effect
+                        document.body.style.filter = `blur(${Math.random() * 10}px)`;
+                        break;
+                    case 3:
+                        // Glitch transform
+                        document.body.style.transform = `skew(${Math.random() * 10 - 5}deg, ${Math.random() * 10 - 5}deg)`;
+                        break;
+                    case 4:
+                        // Multiple effects
+                        document.body.style.filter = `hue-rotate(${Math.random() * 360}deg) contrast(${1 + Math.random()}) saturate(${1 + Math.random() * 3})`;
+                        break;
+                }
+                
+                // Reset after a short time
+                setTimeout(() => {
+                    document.body.style.filter = "none";
+                    document.body.style.transform = "none";
+                }, 200);
+            }, 1000);
+            
+            // Show destructive messages
+            const destructiveMessages = [
+                "SİSTEM MƏHV OLUNUR...",
+                "BÜTÜN MƏLUMATLAR SİLİNİR...",
+                "GERİ DÖNÜŞ MÜMKÜN DEYİL...",
+                "KRİTİK SİSTEM MODULLAR DEAKTIV OLUNUR...",
+                "ƏMƏLIYYAT SİSTEMİ DAĞIDILIR..."
+            ];
+            
+            let msgIndex = 0;
+            const destructionInterval = setInterval(() => {
+                if (msgIndex < destructiveMessages.length) {
+                    showPopup(destructiveMessages[msgIndex], Math.random() > 0.5 ? "center" : "top");
+                    msgIndex++;
+                } else {
+                    clearInterval(destructionInterval);
+                    
+                    // Final countdown
+                    setTimeout(() => {
+                        showFinalCountdown();
+                    }, 3000);
+                }
+            }, 4000);
+        }
+        
+        // Final countdown effect
+        function showFinalCountdown() {
+            // Create a full-screen overlay for the countdown
+            const countdownOverlay = document.createElement('div');
+            countdownOverlay.style.position = 'fixed';
+            countdownOverlay.style.top = '0';
+            countdownOverlay.style.left = '0';
+            countdownOverlay.style.width = '100%';
+            countdownOverlay.style.height = '100%';
+            countdownOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            countdownOverlay.style.color = '#f00';
+            countdownOverlay.style.fontSize = '15vw';
+            countdownOverlay.style.display = 'flex';
+            countdownOverlay.style.justifyContent = 'center';
+            countdownOverlay.style.alignItems = 'center';
+            countdownOverlay.style.zIndex = '1000';
+            countdownOverlay.style.fontWeight = 'bold';
+            countdownOverlay.style.textShadow = '0 0 20px #f00';
+            document.body.appendChild(countdownOverlay);
+            
+            let count = 10;
+            countdownOverlay.textContent = count;
+            
+            const countdownInterval = setInterval(() => {
+                count--;
+                countdownOverlay.textContent = count;
+                
+                // Shake the screen
+                document.body.style.transform = `translate(${Math.random() * 10 - 5}px, ${Math.random() * 10 - 5}px)`;
+                setTimeout(() => {
+                    document.body.style.transform = 'none';
+                }, 100);
+                
+                if (count <= 0) {
+                    clearInterval(countdownInterval);
+                    
+                    // Final message
+                    countdownOverlay.textContent = "SİSTEM MƏHV EDİLDİ";
+                    countdownOverlay.style.fontSize = 'clamp(20px, 5vw, 60px)';
+                    
+                    setTimeout(() => {
+                        // Add company signature
+                        countdownOverlay.innerHTML = `
+                            <div style="text-align: center;">
+                                <div style="font-size: clamp(20px, 5vw, 60px); margin-bottom: 30px;">SİSTEM MƏHV EDİLDİ</div>
+                                <div style="font-size: clamp(16px, 3vw, 30px); color: #ff0; margin-top: 30px;">ZechTiccer Company</div>
+                                <div style="font-size: clamp(14px, 2vw, 20px); color: #ff0; margin-top: 10px;">HACK TAMAMLANDI</div>
+                            </div>
+                        `;
+                    }, 3000);
+                }
+            }, 1000);
+        }
+        
+        // Show popup message
+        function showPopup(message, position = "top") {
+            const popup = document.getElementById('alertPopup');
+            popup.innerHTML = message;
+            popup.style.display = "block";
+            
+            if (position === "top") {
+                popup.style.top = "20%";
+                popup.style.left = "50%";
+                popup.style.transform = "translateX(-50%)";
+            } else if (position === "center") {
+                popup.style.top = "50%";
+                popup.style.left = "50%";
+                popup.style.transform = "translate(-50%, -50%)";
+            }
+            
+            setTimeout(() => {
+                popup.style.display = "none";
+            }, 3000);
+        }
+        
+        // System info detection
+        setTimeout(() => {
+            const ipElement = document.getElementById('ip-address');
+            const browserElement = document.getElementById('browser-info');
+            const locationElement = document.getElementById('location');
+            const systemElement = document.getElementById('system-info');
+            
+            // Gerçek IP ve konum bilgilerini al
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    // Gerçek IP adresini göster
+                    ipElement.textContent = data.ip || "Bilinmiyor";
+                    
+                    // Gerçek konum bilgilerini göster
+                    const city = data.city || "Bilinmiyor";
+                    const region = data.region || "";
+                    const country = data.country_name || "";
+                    const countryCode = data.country_code || "";
+                    
+                    // Konum formatını oluştur: "Şehir, Ülke Kodu"
+                    locationElement.textContent = `${city}, ${countryCode}`;
+                    
+                    // Eğer varsa ek bilgileri göster (opsiyonel)
+                    if (data.latitude && data.longitude) {
+                        locationElement.title = `Enlem: ${data.latitude}, Boylam: ${data.longitude}`;
+                    }
+                    
+                    // Gerçek tarayıcı bilgisini al
+                    const userAgent = navigator.userAgent;
+                    let browserInfo = "Unknown";
+                    
+                    if (userAgent.includes("Firefox")) {
+                        browserInfo = "Mozilla Firefox";
+                    } else if (userAgent.includes("Chrome")) {
+                        browserInfo = "Google Chrome";
+                    } else if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) {
+                        browserInfo = "Safari";
+                    } else if (userAgent.includes("Edge") || userAgent.includes("Edg")) {
+                        browserInfo = "Microsoft Edge";
+                    } else if (userAgent.includes("MSIE") || userAgent.includes("Trident/")) {
+                        browserInfo = "Internet Explorer";
+                    } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
+                        browserInfo = "Opera";
+                    }
+                    
+                    browserElement.textContent = browserInfo;
+                    
+                    // İşletim sistemi algılama
+                    let os = "Unknown OS";
+                    if (userAgent.includes("Windows NT 10.0")) {
+                        os = "Windows 10";
+                    } else if (userAgent.includes("Windows NT 6.3")) {
+                        os = "Windows 8.1";
+                    } else if (userAgent.includes("Windows NT 6.2")) {
+                        os = "Windows 8";
+                    } else if (userAgent.includes("Windows NT 6.1")) {
+                        os = "Windows 7";
+                    } else if (userAgent.includes("Windows NT 6.0")) {
+                        os = "Windows Vista";
+                    } else if (userAgent.includes("Windows NT 5.1")) {
+                        os = "Windows XP";
+                    } else if (userAgent.includes("Mac")) {
+                        os = "MacOS";
+                    } else if (userAgent.includes("Linux")) {
+                        os = "Linux";
+                    } else if (userAgent.includes("Android")) {
+                        os = "Android";
+                    } else if (userAgent.includes("iPhone") || userAgent.includes("iPad")) {
+                        os = "iOS";
+                    }
+                    
+                    systemElement.textContent = `${os} ${data.version || ""}`;
+                    
+                    // IP algılandıktan sonra bildirim göster
+                    setTimeout(() => {
+                        showPopup(`İstifadəçi tapıldı: ${os} / ${browserInfo}`, "center");
+                        
+                        // ISP ve ağ bilgilerini göster
+                        if (data.org) {
+                            setTimeout(() => {
+                                showPopup(`Şəbəkə: ${data.org}`, "top");
+                            }, 3000);
+                        }
+                    }, 1000);
+                })
+                .catch(error => {
+                    // Hata durumunda yedek olarak rastgele bilgiler göster
+                    console.error("IP veri alımı hatası:", error);
+                    
+                    // Rastgele IP oluştur
+                    const ip = `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`;
+                    ipElement.textContent = ip;
+                    
+                    // Rastgele konum seç
+                    const locations = ["Bakı, AZ", "Istanbul, TR", "Moscow, RU", "Berlin, DE", "London, UK"];
+                    locationElement.textContent = locations[Math.floor(Math.random() * locations.length)];
+                    
+                    // Browser ve sistem bilgilerini yine de göster
+                    const userAgent = navigator.userAgent;
+                    let browserInfo = "Unknown";
+                    
+                    if (userAgent.includes("Firefox")) {
+                        browserInfo = "Mozilla Firefox";
+                    } else if (userAgent.includes("Chrome")) {
+                        browserInfo = "Google Chrome";
+                    } else if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) {
+                        browserInfo = "Safari";
+                    } else if (userAgent.includes("Edge") || userAgent.includes("Edg")) {
+                        browserInfo = "Microsoft Edge";
+                    } else if (userAgent.includes("MSIE") || userAgent.includes("Trident/")) {
+                        browserInfo = "Internet Explorer";
+                    }
+                    
+                    browserElement.textContent = browserInfo;
+                    
+                    // İşletim sistemi
+                    let os = "Unknown OS";
+                    if (userAgent.includes("Windows NT 10.0")) {
+                        os = "Windows 10";
+                    } else if (userAgent.includes("Windows NT 6.3")) {
+                        os = "Windows 8.1";
+                    } else if (userAgent.includes("Windows NT 6.1")) {
+                        os = "Windows 7";
+                    } else if (userAgent.includes("Mac")) {
+                        os = "MacOS";
+                    } else if (userAgent.includes("Linux")) {
+                        os = "Linux";
+                    } else if (userAgent.includes("Android")) {
+                        os = "Android";
+                    } else if (userAgent.includes("iPhone") || userAgent.includes("iPad")) {
+                        os = "iOS";
+                    }
+                    
+                    systemElement.textContent = os;
+                    
+                    // Bildirim göster
+                    setTimeout(() => {
+                        showPopup(`İstifadəçi tapıldı: ${os} / ${browserInfo}`, "center");
+                    }, 1000);
+                });
+            
+        }, 3000);
+        
+        // Screen glitch effect at random intervals
+        setInterval(() => {
+            if (Math.random() > 0.95) {
+                document.body.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+                setTimeout(() => {
+                    document.body.style.filter = "none";
+                }, 100);
+            }
+        }, 2000);
+        
+        // Responsive adjustments
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        
+        // Show initial popup
+        setTimeout(() => {
+            showPopup("DİQQƏT: Sistem ZechTiccer tərəfindən hackləndı!", "center");
+        }, 1000);
+    </script>
 </body>
 </html> 
